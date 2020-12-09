@@ -78,7 +78,7 @@ public class BugServiceRestController {
 		return this.service.findByPagination(page_size, (page-1));
 	}
 	
-	@PostMapping(path = "/issues")
+	@PostMapping(path = "/issues", produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public BugResource add(@RequestBody BugResource bug) {
 		
